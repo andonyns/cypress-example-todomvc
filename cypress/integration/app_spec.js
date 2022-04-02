@@ -643,38 +643,4 @@ describe('TodoMVC - React', function () {
     })
   })
 
-  context('Contrast', () => {
-    it('has good contrast when empty', () => {
-      cy.addAxeCode()
-      cy.checkA11y(null, {
-        runOnly: ['cat.color'],
-      })
-    })
-
-    it('has good contrast with several todos', () => {
-      cy.addAxeCode()
-      cy.get('.new-todo')
-      .type('learn testing{enter}')
-      .type('be cool{enter}')
-
-      cy.get('.todo-list li').should('have.length', 2)
-      cy.checkA11y(null, {
-        runOnly: ['cat.color'],
-      })
-
-      // and after marking an item completed
-      cy.get('.todo-list li')
-      .first()
-      .find('.toggle')
-      .check()
-
-      cy.get('.todo-list li')
-      .first()
-      .should('have.class', 'completed')
-
-      cy.checkA11y(null, {
-        runOnly: ['cat.color'],
-      })
-    })
-  })
 })
