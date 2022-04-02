@@ -1,5 +1,6 @@
 {
   "baseUrl": "https://demo.playwright.dev/todomvc/#/",
   "fixturesFolder": false,
-  "pluginsFile": false
+  "pluginsFile": false,
+  "video": false
 }
