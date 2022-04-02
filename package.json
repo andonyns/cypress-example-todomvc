@@ -10,9 +10,7 @@
     "cypress:run:record": "cypress run --record",
     "cypress:run:chrome": "cypress run --browser chrome",
     "cypress:run:headed": "cypress run --headed",
-    "dev": "run-p --race start:ci cypress:open",
     "test": "cypress run",
-    "test:ci": "run-p --race start:ci cypress:run",
     "lint": "eslint --fix cypress/integration cypress/support js",
     "types": "tsc --noEmit"
   },
