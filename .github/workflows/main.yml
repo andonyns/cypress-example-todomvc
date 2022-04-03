@@ -1,5 +1,7 @@
 name: End-to-end tests
-on: [push]
+on:
+  push:
+    branches: [ main, lite-version ]
 jobs:
   cypress-run:
     runs-on: windows-latest
